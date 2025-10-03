@@ -1,4 +1,6 @@
 const myinput = document.getElementById("myinput");
-function add(){
-    myinput.value = Number(myinput.value) + 1;
+let current_value = 0;
+function calc(x){
+    current_value += Number(x);
+    myinput.value = current_value;
 }
