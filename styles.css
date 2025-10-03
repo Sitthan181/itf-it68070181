@@ -7,3 +7,12 @@ nav {
 body {
     margin: 0;
 }
+
+.container {
+    margin-left: 16px;
+    margin-right: 36px;
+}
+.slide {
+    margin-left: 16px;
+    margin-right: 16px;
+}
