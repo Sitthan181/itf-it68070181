@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <!-- https://drive.google.com/drive/folders/1cseXRARTbNeVR9GBlX9PdU8LAVkkLjvV -->
      <!-- https://vercel.com/sitthans-projects/itf-it68070181 -->
       <!-- https://github.com/Sitthan181/itf-it68070181/blob/main/index.html -->
@@ -19,11 +19,42 @@
     <div class="container">
         <h1>Welcome to ITF Web Fundamentals</h1>
         <img src="crying meme.png" width="169" alt="crying" />
-        <p>This is a sample HTML page, with CSS and JS.</p>
+        <p>This is a sample HTML page using CSS and JS.</p>
         <hr>
-        <textarea rows="7" cols="100" placeholder="Type something..."></textarea>
+        <textarea id="log" rows="7" cols="100" readonly></textarea>
 
         <h2>Account Overview</h2>
+    <div style="display: flex; align-items: flex-start;">
+        <img src="user.png" width="48" alt="user" style="margin-right: 10px;" />
+        <div>
+            <b>Account Information</b><br>
+            Name: Sitthan Aromprasert<br>
+            Type: Savings Account
+        </div>
+    </div>
+    <div style="display: flex; align-items: flex-start;">
+        <img src="toolbox.png" width="48" alt="toolbox" style="margin-right: 10px;" />
+        <div>
+            <b>Balance Information</b><br>
+            Current account balance:
+            <input type="number" id="account_bal" value="1000" style="margin-left:5px;"><br>
+            Current cash balance:
+            <input type="number" id="cash_bal" value="1000" style="margin-left:27px;"><br>
+            <button id="changeBtn">Change</button>
+        </div>
+    </div>
+    <div style="display: flex; align-items: flex-start;">
+        <img src="toolbox.png" width="48" alt="toolbox" style="margin-right: 10px;" />
+        <div>
+            <b>Bank Operation</b><br>
+            <select id="operation">
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+            </select>
+            <input type="number" id="amount" value="1">
+            <button onclick="proceed()">Proceed</button>
+        </div>
+    </div>
         <div> Enter number:</div>
         <input type="number" id="myinput" value="0">
         <button onclick="calc(this.innerText)">+1</button>
