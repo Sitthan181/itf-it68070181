@@ -23,44 +23,65 @@
         <hr>
         <textarea id="log" rows="7" cols="219" readonly></textarea>
 
-        <h2>Account Overview</h2>
-    <div style="display: flex; align-items: flex-start;">
-        <img src="user.png" width="48" alt="user" style="margin-right: 10px;" />
-        <div>
-            <b>Account Information</b><br>
-            Name: Sitthan Aromprasert<br>
-            Type: Savings Account
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="width: 48%;">
+                <h2>Account Overview</h2>
+
+                <div style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+                    <img src="user.png" width="48" alt="user" style="margin-right: 10px;" />
+                    <div>
+                        <b>Account Information</b><br>
+                        Name: Sitthan Aromprasert<br>
+                        Type: Savings Account
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+                    <img src="toolbox.png" width="48" alt="toolbox" style="margin-right: 10px;" />
+                    <div>
+                        <b>Balance Information</b><br>
+                        Current account balance:
+                        <input type="number" id="account_bal" value="1000" style="margin-left:5px;"><br>
+                        Current cash balance:
+                        <input type="number" id="cash_bal" value="1000" style="margin-left:27px;"><br>
+                        <button id="changeBtn" onclick="updateValues()">Change</button>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <img src="briefcase.png" width="48" alt="bank" style="margin-right: 10px;" />
+                    <div>
+                        <b>Bank Operation</b><br>
+                        <select id="operation">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="amount" value="1">
+                        <button onclick="proceed()">Proceed</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 48%;">
+                <h2>Financial Tools</h2>
+
+                <div style="display: flex; align-items: flex-start;">
+                    <img src="coins.png" width="48" alt="coins" style="margin-right: 10px;" />
+                    <div>
+                        <b>Currency Converter</b><br>
+                        Input balance:
+                        <input type="number" id="conv_in" value="0" style="margin-left:10px;"><br>
+                        Output balance:
+                        <input type="number" id="conv_out" value="0"><br>
+                        Input currency:
+                        <select id="conv_type">
+                            <option value="USD">USD</option>
+                            <option value="THB">THB</option>
+                        </select>
+                        <button onclick="convert()">Convert</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div style="display: flex; align-items: flex-start;">
-        <img src="toolbox.png" width="48" alt="toolbox" style="margin-right: 10px;" />
-        <div>
-            <b>Balance Information</b><br>
-            Current account balance:
-            <input type="number" id="account_bal" value="1000" style="margin-left:5px;"><br>
-            Current cash balance:
-            <input type="number" id="cash_bal" value="1000" style="margin-left:27px;"><br>
-            <button id="changeBtn">Change</button>
-        </div>
-    </div>
-    <div style="display: flex; align-items: flex-start;">
-        <img src="toolbox.png" width="48" alt="toolbox" style="margin-right: 10px;" />
-        <div>
-            <b>Bank Operation</b><br>
-            <select id="operation">
-                <option value="deposit">Deposit</option>
-                <option value="withdraw">Withdraw</option>
-            </select>
-            <input type="number" id="amount" value="1">
-            <button onclick="proceed()">Proceed</button>
-        </div>
-    </div>
-        <div> Enter number:</div>
-        <input type="number" id="myinput" value="0">
-        <button onclick="calc(this.innerText)">+1</button>
-        <button onclick="calc(this.innerText)">-1</button>
-        <br>
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
